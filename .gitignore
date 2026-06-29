@@ -12,6 +12,9 @@
 !/CLAUDE.md
 !/keybindings.json
 !/skills/
+# agent-development: proprietary (anthropics/claude-code, All-rights-reserved) —
+# local-only, must NOT go in the public repo
+/skills/agent-development/
 !/commands/
 !/agents/
 !/hooks/

@@ -10,6 +10,12 @@
             "command": "/usr/bin/python3 $HOME/bin/claude_stop_hook.py",
             "timeout": 90,
             "async": true
+          },
+          {
+            "type": "command",
+            "command": "/usr/bin/node $HOME/.claude/hooks/cost-tracker.js",
+            "timeout": 15,
+            "async": true
           }
         ]
       }
