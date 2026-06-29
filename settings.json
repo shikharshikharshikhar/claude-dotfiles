@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/usr/bin/python3 /Users/shikhar/bin/claude_stop_hook.py",
+            "command": "/usr/bin/python3 $HOME/bin/claude_stop_hook.py",
             "async": true,
             "timeout": 90
           }

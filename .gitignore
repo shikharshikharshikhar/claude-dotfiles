@@ -16,11 +16,11 @@
 !/agents/
 !/hooks/
 
-# --- plugin marketplace list (NOT the cached clones or installed plugins) ---
+# --- plugin config (NOT the cached clones, installed plugins, or the
+#     auto-generated known_marketplaces.json which embeds an absolute path) ---
 !/plugins/
 /plugins/*
 !/plugins/config.json
-!/plugins/known_marketplaces.json
 
 # Note: settings.local.json is intentionally NOT tracked — it holds
 # machine-specific permission rules (paths to external drives, etc.).
