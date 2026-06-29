@@ -1,0 +1,22 @@
+{
+  "model": "opus",
+  "effortLevel": "xhigh",
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "tui": "fullscreen",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/python3 /Users/shikhar/bin/claude_stop_hook.py",
+            "async": true,
+            "timeout": 90
+          }
+        ]
+      }
+    ]
+  }
+}

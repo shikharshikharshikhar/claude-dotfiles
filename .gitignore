@@ -1,0 +1,26 @@
+# ~/.claude dotfiles — curated, portable config only.
+# Strategy: ignore EVERYTHING by default, then explicitly track the handful of
+# files/dirs that are safe and useful to carry across devices. This keeps
+# credentials, caches, and private session transcripts out of git by default.
+
+/*
+
+# --- tracked config ---
+!/.gitignore
+!/README.md
+!/settings.json
+!/CLAUDE.md
+!/keybindings.json
+!/skills/
+!/commands/
+!/agents/
+!/hooks/
+
+# --- plugin marketplace list (NOT the cached clones or installed plugins) ---
+!/plugins/
+/plugins/*
+!/plugins/config.json
+!/plugins/known_marketplaces.json
+
+# Note: settings.local.json is intentionally NOT tracked — it holds
+# machine-specific permission rules (paths to external drives, etc.).
