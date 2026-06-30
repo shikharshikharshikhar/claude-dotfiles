@@ -22,6 +22,8 @@
 # --- word of the day (lock screen): updated daily by the 7am cloud routine,
 #     fetched by ~/.local/bin/word-of-the-day-fetch on this laptop ---
 !/word-of-the-day.json
+!/.github/
+!/.github/workflows/
 
 # --- plugin config (NOT the cached clones, installed plugins, or the
 #     auto-generated known_marketplaces.json which embeds an absolute path) ---

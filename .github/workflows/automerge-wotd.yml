@@ -1,0 +1,32 @@
+name: Auto-merge word of the day
+
+on:
+  pull_request:
+    branches: [wotd]
+    paths: [word-of-the-day.json]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    # TODO: verify this matches the actual PR author once the routine opens a
+    # real PR (could be a GitHub App bot login instead of the user account),
+    # then tighten if needed.
+    if: github.event.pull_request.user.login == 'shikharshikharshikhar'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require the PR touches only word-of-the-day.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          files=$(gh pr diff "$PR_URL" --name-only)
+          [ "$files" = "word-of-the-day.json" ]
+
+      - name: Merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr merge "$PR_URL" --squash
